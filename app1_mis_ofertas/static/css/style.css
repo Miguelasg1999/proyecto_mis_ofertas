@@ -40,6 +40,47 @@ nav{
     transition: all .4s ease;
 }
 
+.footer{
+    background-color: #333;
+    padding: 70px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.footer .about{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+    color: #aaa;
+    transition: all .4s ease;
+}
+
+.social{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer a img {
+    width: 50px;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;   
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
 /*----------------------------------*/
 
 /*-----------------index.html-----------------*/
@@ -88,6 +129,7 @@ nav{
     border-radius: 5px;
     background-color: #222;
     color: white;
+    margin-bottom: 40px;
 }
 
 #id_username, #id_password{
@@ -124,6 +166,7 @@ nav{
     border-radius: 5px;
     background-color: #222;
     color: white;
+    margin-bottom: 40px;
 }
 
 #id_username, #id_password1, #id_password2, #id_rut{
