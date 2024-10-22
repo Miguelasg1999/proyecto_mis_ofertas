@@ -92,6 +92,10 @@ footer{
     justify-content: space-between;
 }
 
+.form-search img{
+    width: 50px;
+}
+
 .div-form{
     width: 70%;
     display: flex;
@@ -236,7 +240,17 @@ footer{
 
     .form-search{
         display: flex;
+        flex-direction: column; 
+    }
+
+    .form-search{
+        text-align: center;
+    }
+
+    .form-search .div-form{
+        display: flex;
         flex-direction: column;
+        margin: auto;
     }
 
     .form-control{
