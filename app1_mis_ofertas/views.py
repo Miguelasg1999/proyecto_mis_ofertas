@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-#from .forms import 
+from .forms import InfoUsuarioForm
 
 #Colores hexadecimales para el proyecto
 #590012
@@ -35,6 +35,7 @@ def signin(request):
 def signup(request):
     if request.method == 'GET':
         return render(request, 'signup.html', {
+            'campo': InfoUsuarioForm,
             'form': UserCreationForm
         })
     else:

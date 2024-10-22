@@ -76,6 +76,88 @@ nav{
 
 /*----------------------------------*/
 
+/*-----------------signin.html-----------------*/
+
+.form-signin{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#id_username, #id_password{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#id_username, #id_password{
+    border: 1px solid #999;
+    box-shadow: none;
+    outline: none;
+}
+
+.h2-signin{
+    text-align: center;
+}
+/*----------------------------------*/
+
+/*-----------------signup.html-----------------*/
+.form-signup .helptext, .form-signup ul{
+    display: none;
+}
+
+.form-signup{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#id_username, #id_password1, #id_password2, #id_rut{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#notificacion{
+    margin-right: 10px;
+}
+
+.h2-signup{
+    text-align: center;
+}
+
+#id_username:focus, #id_password1:focus, #id_password2:focus, #id_rut:focus{
+    border: 1px solid #999;
+    box-shadow: none;
+    outline: none;
+}
+
+/*----------------------------------*/
+
+.error-mssg {
+    color: red;
+}
 
 /*-----------------mediaqueries-----------------*/
 @media (min-width: 100px) and (max-width: 768px) {
