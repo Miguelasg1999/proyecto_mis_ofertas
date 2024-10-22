@@ -85,9 +85,16 @@ footer{
 
 /*-----------------index.html-----------------*/
 .form-search{
-    width: 35%;
+    width: 50%;
     margin: auto;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-form{
+    width: 70%;
+    display: flex;
 }
 
 .btn-color{
@@ -99,6 +106,10 @@ footer{
     background-color: #a6344c;
     color: white;
     transition: all .4s ease;
+}
+
+.form-control{
+    width: 50%;
 }
 
 .form-control:focus{
@@ -124,12 +135,12 @@ footer{
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 80px;
     padding: 30px;
     border-radius: 5px;
     background-color: #222;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 #id_username, #id_password{
@@ -175,6 +186,7 @@ footer{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .checkbox{
