@@ -126,6 +126,11 @@ footer{
     margin-top: 30px;
 }
 
+.cards .btn-dark{
+    width: 100%;
+    text-align: center;
+}
+
 .cards .card{
     margin-bottom: 20px;
 }
@@ -220,6 +225,10 @@ footer{
 
 /*-----------------mediaqueries-----------------*/
 @media (min-width: 100px) and (max-width: 768px) {
+    .img-publicar{
+        margin-bottom: 30px;
+    }
+    
     nav{
         display: flex;
         flex-direction: column;
@@ -251,6 +260,7 @@ footer{
         display: flex;
         flex-direction: column;
         margin: auto;
+        margin-top: 10px;
     }
 
     .form-control{
