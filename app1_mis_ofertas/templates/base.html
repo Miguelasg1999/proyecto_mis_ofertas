@@ -19,7 +19,7 @@
             <ul class="items">
                 {% if user.is_authenticated%}
                 <li>
-                    <a href="">Cerrar sesión</a>
+                    <a href="{% url 'signout' %}">Cerrar sesión</a>
                 </li>
                 {% else %}
                 <li>

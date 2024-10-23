@@ -190,13 +190,21 @@ footer{
     margin-bottom: 40px;
 }
 
-#id_username, #id_password1, #id_password2, #id_rut{
+#id_username, #id_rut, #id_nombre, #id_apellido{
     display: block;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+#id_password1, #id_password2{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .checkbox{

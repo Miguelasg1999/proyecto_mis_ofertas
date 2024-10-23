@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import InfoUsuarioForm
+from django.contrib.auth.decorators import login_required
+from .models import InfoUsuario
 
 #Colores hexadecimales para el proyecto
 #590012
@@ -43,6 +45,8 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'],password=request.POST['password1'])
                 user.save()
+                infoUsuario = InfoUsuario.objects.create(user=user, rut=request.POST['rut'], nombre=request.POST['nombre'], apellido=request.POST['apellido'])
+                infoUsuario.save()
                 login(request, user)
                 return redirect('home')
             except IntegrityError:
@@ -54,3 +58,7 @@ def signup(request):
                     'form': UserCreationForm,
                     'error': 'Las Contraseñas no coinciden'
                 })
+    
+def signout(request):
+    logout(request)
+    return redirect('home')

@@ -4,4 +4,4 @@ from .models import InfoUsuario
 class InfoUsuarioForm(forms.ModelForm):
     class Meta:
         model = InfoUsuario
-        fields = ['rut']
+        fields = ['rut', 'nombre', 'apellido']
