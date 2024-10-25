@@ -4,6 +4,10 @@
 
 {% block content %}
     <form class="form-product" method="POST">
+        {% csrf_token %}
+    <h2 class="h2-signin">Publicar oferta</h2>
         {{form}}
+    <p class="error-mssg">{{error}}</p>
+    <button class="btn btn-light">Iniciar sesión</button>
     </form>
 {% endblock %}
