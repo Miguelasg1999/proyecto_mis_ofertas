@@ -3,9 +3,9 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from .forms import InfoUsuarioForm
+from .forms import InfoUsuarioForm, ProductoForm
 from django.contrib.auth.decorators import login_required
-from .models import InfoUsuario
+from .models import InfoUsuario, Producto
 
 #Colores hexadecimales para el proyecto
 #590012
@@ -15,7 +15,10 @@ from .models import InfoUsuario
 #a6344c
 
 def home(request):
-    return render(request, 'index.html')
+    user = request.user
+    return render(request, 'index.html', {
+        'usuario': user.is_superuser
+    })
 
 def signin(request):
     if request.method == 'GET':
@@ -62,3 +65,8 @@ def signup(request):
 def signout(request):
     logout(request)
     return redirect('home')
+
+def post_product(request):
+    return render(request, 'post.html', {
+        'form': ProductoForm
+    })

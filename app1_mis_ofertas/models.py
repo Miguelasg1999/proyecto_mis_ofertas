@@ -11,3 +11,10 @@ class InfoUsuario(models.Model):
     def __str__(self):
         return f'{self.nombre}'
     
+class Producto(models.Model):
+    nombre = models.CharField(max_length=50)
+    descripcion = models.TextField()
+    precio = models.IntegerField()
+    
+    def __str__(self):
+        return f'{self.nombre}'

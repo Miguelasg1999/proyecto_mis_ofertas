@@ -93,8 +93,9 @@ footer{
     justify-content: space-between;
 }
 
-.form-search img{
-    width: 50px;
+.form-search img, .form-search .fill{
+    width: 40px;
+    height: 40px;
 }
 
 .div-form{
@@ -138,6 +139,21 @@ footer{
 
 /*----------------------------------*/
 
+/*-----------------post.html-----------------*/
+.form-product{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 80px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    margin-bottom: 80px;
+}
+/*----------------------------------*/
+
 /*-----------------signin.html-----------------*/
 
 .form-signin{
@@ -153,15 +169,12 @@ footer{
     margin-bottom: 80px;
 }
 
-#id_username, #id_password{
+.form-signin #id_username, .form-signin #id_password{
     display: block;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-#id_username, #id_password{
     border: 1px solid #999;
     box-shadow: none;
     outline: none;
@@ -190,7 +203,7 @@ footer{
     margin-bottom: 40px;
 }
 
-#id_username, #id_rut, #id_nombre, #id_apellido{
+.form-signup #id_username, .form-signup #id_rut, .form-signup #id_nombre, .form-signup #id_apellido{
     display: block;
     width: 100%;
     padding: 10px;
@@ -199,7 +212,7 @@ footer{
     margin-bottom: 10px;
 }
 
-#id_password1, #id_password2{
+.form-signup #id_password1, .form-signup #id_password2{
     display: block;
     width: 100%;
     padding: 10px;

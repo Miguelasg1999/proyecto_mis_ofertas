@@ -5,7 +5,11 @@
 {% block content %}
 
     <form class="d-flex form-search" role="search">
-        <a href=""><img src="{% static 'img/signo_positivo.jpeg' %}" alt=""></a>
+        {% if user.is_authenticated and usuario %}
+            <a href="{% url "post_product" %}"><img src="{% static 'img/signo_positivo.jpeg' %}" alt=""></a>
+        {% else %}
+            <div class="fill"></div>
+        {% endif %}
         <div class="div-form">
             <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
             <button class="btn btn-color" type="submit">Buscar</button>
