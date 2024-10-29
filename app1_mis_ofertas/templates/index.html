@@ -18,125 +18,26 @@
     </form>
 
     <div class="container cards">
-            <!--Fila-->
-            <div class="row">
-                <div class="col-md-4 col-xs-12">
+        <div class="row">
+            {% for producto in productos  %}
+            
+            <div class="col-md-4 col-xs-12">
                     <div class="card">
-                        <img src="{% static 'img/nido.jpeg' %}" class="card-img-top img-publicar" alt="">
+                        <img src="{{producto.imagen.url}}" class="card-img-top img-publicar" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Leche entera</h5>
-                            <p class="card-text">Leche pasteurizada de alta calidad.</p>
-                            <h5 class="card-title">$ 1.200</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
+                            <h5 class="card-title">{{producto.nombre}}</h5>
+                            <p class="card-text">{{producto.descripcion}}</p>
+                            <h5 class="card-title">$ {{producto.precio}}</h5>
+                            {% if user.is_authenticated and usuario %}
+                                <a href="{% url 'eliminarProd' producto.id %}" class="btn btn-danger btn-eliminar">Eliminar</a>
+                                <a href="{% url 'editarProd' producto.id %}" class="btn btn-primary btn-editar">Editar</a>
+                            {% endif %}
+                            <a href="{% url 'product' producto.id %}" class="btn btn-dark">Ir a oferta</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/manzana_fuji.jpg' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Manzana Fuji</h5>
-                            <p class="card-text">Manzanas frescas y crujientes, perfectas para un snack saludable.</p>
-                            <h5 class="card-title">$ 1.000</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/pan_integral.webp' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Pan Integral</h5>
-                            <p class="card-text">Pan integral recién horneado, ideal para un desayuno nutritivo.</p>
-                            <h5 class="card-title">$ 800</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!--Fin fila-->
-
-            <!--Fila-->
-            <div class="row">
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/arroz_basmati.jpeg' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Arroz Basmati</h5>
-                            <p class="card-text"> Arroz de grano largo, ideal para platos exóticos.</p>
-                            <h5 class="card-title">$ 1.500</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/salmon_ahumado.jpg' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Salmón Ahumado</h5>
-                            <p class="card-text">Salmón ahumado premium, perfecto para canapés.</p>
-                            <h5 class="card-title">$ 7.500</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/pasta_fusilli.webp' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Pasta Fusilli</h5>
-                            <p class="card-text">Pasta de trigo duro, perfecta para tus recetas italianas favoritas.</p>
-                            <h5 class="card-title">$ 1.300</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Fin fila-->
-
-            <!--Fila-->
-            <div class="row">
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/aceite_oliva.png' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Aceite de Oliva Extra Virgen</h5>
-                            <p class="card-text">Aceite de oliva de primera prensada, ideal para aliños y cocina gourmet.</p>
-                            <h5 class="card-title">$ 4.500</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/conserva_atun.jpeg' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Conserva de Atún</h5>
-                            <p class="card-text">Atún en conserva, una fuente rápida de proteína.</p>
-                            <h5 class="card-title">$ 2.500</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-                    <div class="card">
-                        <img src="{% static 'img/chocolate.jpeg' %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Chocolate Negro 70% Cacao</h5>
-                            <p class="card-text">Chocolate negro artesanal, perfecto para amantes del cacao.</p>
-                            <h5 class="card-title">$ 2.000</h5>
-                            <a href="#" class="btn btn-dark">Ir a oferta</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Fin fila-->
+        {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

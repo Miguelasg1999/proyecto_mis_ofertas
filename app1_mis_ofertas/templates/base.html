@@ -17,11 +17,14 @@
     <nav class="container-fluid">
             <ul class="logo">
                 <li>
-                    <a href="{% url "home" %}"><img src="{% static 'img/logo.jpg' %}" alt="Logo">Mis Ofertas</a>
+                    <a href="{% url "main" %}"><img src="{% static 'img/logo.jpg' %}" alt="Logo">Mis Ofertas</a>
                 </li>
             </ul>
             <ul class="items">
                 {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'home' %}">Ofertas</a>
+                </li>
                 <li>
                     <a href="{% url 'signout' %}">Cerrar sesión</a>
                 </li>

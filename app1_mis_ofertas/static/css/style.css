@@ -271,6 +271,25 @@ footer{
     color: red;
 }
 
+.center{
+    width: 80%;
+    margin:auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.margin{
+    margin-bottom: 20px;
+}
+
+.btn-editar, .btn-eliminar{
+    width: 100%;
+}
+
+.btn-eliminar{
+    margin-bottom: 10px;
+}
+
 /*-----------------mediaqueries-----------------*/
 @media (min-width: 100px) and (max-width: 768px) {
     .img-publicar{

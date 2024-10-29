@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<form class="form-product" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<h2 class="h2-signin">Editar publicación</h2>
+    {{form}}
+<p class="error-mssg">{{error}}</p>
+<button class="btn btn-light">Guardar cambios</button>
+</form>
+{% endblock %}
