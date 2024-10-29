@@ -7,7 +7,7 @@ from .forms import InfoUsuarioForm, ProductoForm
 from django.contrib.auth.decorators import login_required
 from .models import InfoUsuario, Producto
 
-
+@login_required
 def home(request):
     user = request.user
 
@@ -63,7 +63,7 @@ def signup(request):
 @login_required
 def signout(request):
     logout(request)
-    return redirect('home')
+    return redirect('main')
 
 @login_required
 def post_product(request):
@@ -79,7 +79,7 @@ def post_product(request):
     else:
         return redirect('home')
 
- 
+@login_required
 def product(request, id):
     producto = Producto.objects.get(id=id)
     return render(request, 'product.html',{
