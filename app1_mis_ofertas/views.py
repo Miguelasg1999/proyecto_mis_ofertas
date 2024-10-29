@@ -61,12 +61,20 @@ def signup(request):
                     'form': UserCreationForm,
                     'error': 'Las Contraseñas no coinciden'
                 })
-    
+@login_required
 def signout(request):
     logout(request)
     return redirect('home')
 
+@login_required
 def post_product(request):
-    return render(request, 'post.html', {
+    user = request.user
+    if user.is_superuser:
+        return render(request, 'post.html', {
         'form': ProductoForm
     })
+    else:
+        return redirect('home')
+    
+def product(request):
+    return render(request, 'product.html')
