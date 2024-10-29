@@ -7,12 +7,6 @@ from .forms import InfoUsuarioForm, ProductoForm
 from django.contrib.auth.decorators import login_required
 from .models import InfoUsuario, Producto
 
-#Colores hexadecimales para el proyecto
-#590012
-#6c0d21
-#801a2f
-#93273e
-#a6344c
 
 def home(request):
     user = request.user

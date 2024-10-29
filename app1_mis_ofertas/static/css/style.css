@@ -290,6 +290,26 @@ footer{
     margin-bottom: 10px;
 }
 
+.container-main{
+    background-color: #a6344c;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+.h2-main{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.btn-main {
+    font-weight: bold;
+}
+
 /*-----------------mediaqueries-----------------*/
 @media (min-width: 100px) and (max-width: 768px) {
     .img-publicar{

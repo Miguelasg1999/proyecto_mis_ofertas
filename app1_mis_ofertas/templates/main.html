@@ -3,19 +3,14 @@
 
 {% block content %}
 
-1. Encabezado Atractivo
-Un título llamativo como "¡Aprovecha las Mejores Ofertas del Día!".
-Un subtítulo que explique brevemente la misión: "Descubre ofertas especiales en productos perecibles y no perecibles y ayuda a reducir el desperdicio".
-2. Llamada a la Acción (CTA)
-Botón destacado que diga "Ver Ofertas Ahora" o "Regístrate para Ofertas Exclusivas".
-3. Descripción Breve del Servicio
-Un párrafo corto que explique cómo funciona la plataforma: "Encuentra ofertas de productos con fecha de vencimiento inminente o en saldo. Compra a precios rebajados y ayuda a las tiendas a reducir el desperdicio".
-4. Beneficios para el Consumidor
-Lista con íconos visuales sobre los beneficios:
-Descuentos Exclusivos: Hasta un 15% en tus compras.
-Ahorra en Productos Frescos: Encuentra alimentos a precios reducidos.
-Participa y Gana: Acumula puntos y obtén descuentos adicionales.
-5. Proceso de Registro Sencillo
-Una sección que explique cómo registrarse: "Únete a nuestra comunidad y comienza a disfrutar de ofertas. ¡Es fácil y rápido!"
+<h2 class="h2-main">Mis ofertas</h2>
 
+<div class="container-fluid container-main">
+    <p> ¡Aprovecha las Mejores Ofertas del Día!</p>
+    <p>Descubre ofertas especiales en productos perecibles y no perecibles y ayuda a reducir el desperdicio.</p>
+    <p>Encuentra ofertas de productos con fecha de vencimiento inminente. Compra a precios rebajados.</p>
+    <p>Ahorra en Productos Frescos: Encuentra alimentos a precios reducidos.</p>
+    <p>Unete a nuestra comunidad y comienza a disfrutar de ofertas. ¡Es fácil y rápido!</p>
+    <a class="btn btn-dark btn-main" href="{% url "signup" %}">Regístrate para Ofertas Exclusivas</a>
+</div>
 {% endblock %}
