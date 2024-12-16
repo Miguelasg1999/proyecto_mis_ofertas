@@ -14,8 +14,18 @@
                 <h5 class="card-title margin">{{producto.nombre}}</h5>
                 <p class="card-text margin">{{producto.descripcion}}</p>
                 <h5 class="card-title margin">$ {{producto.precio}}</h5>
-                <a href="{% url 'home' %}" class="btn btn-dark">Volver</a>
             </div>
+
+            <div>
+                <h5 class="card-title margin" style="margin-top: 10px;">Valorizar</h5>
+                <select name="" id="">
+                    <option value="">Excelente</option>
+                    <option value="">Buena</option>
+                    <option value="">Mala</option>
+                </select>
+
+            </div>
+            <a style="margin-top: 10px;" href="{% url 'home' %}" class="btn btn-dark">Volver</a>
         </div>
     </div>
 {% endblock %}
